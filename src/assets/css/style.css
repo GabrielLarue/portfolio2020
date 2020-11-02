@@ -8,23 +8,35 @@
     src: url("../fonts/Questrial-Regular.ttf");
   }
 
+body {
+    margin: 0;
+    background-color: black;
+    height: 100vmin;
+}
+
 #bodyHome {
-    display: grid;
+    left: 0;
+    bottom: 0;
     background-image: url("../images/canyonBackground.png");
     background-repeat: no-repeat;
     background-size: cover;
-    grid-template-columns: 33% auto 33%;
-    grid-template-rows: repeat(4, 25vh);
+    height: 100vmin;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
 }
 
 #title {
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    height: 100%;
-    width: 100%;
-    grid-column: 1;
-    grid-row: 3;
-    margin-left: 10vw;
+    height: 50%;
+    width: 50%;
+    margin-left: 20vmin;
+    margin-top: 25vmin;
+    position: relative;
+    transition-timing-function: ease-in-out;
+    transition-duration: 250ms;
 }
 
 .titleText {
@@ -34,48 +46,90 @@
 
 #titleLeftColumn{
     display: flex;
+    margin-top: 3.5vmin;
     justify-content: flex-end;
     flex-direction: column;
-    margin-top: -3.5vmin;
     height: 19.5vmin;
+    transition-timing-function: ease-in-out;
+    transition-duration: 250ms;
 }
 
 #titleFirstName {
     font-family: Questrial;
-    font-size: 5vmin;
+    font-size: 7vmin;
     text-align: end;
     grid-column: 1;
     opacity: 0.75;
+    transition-timing-function: ease-in-out;
+    transition-duration: 250ms;
 }
 
 #titleJob {
     font-family: Questrial;
-    font-size: 2vmin;
+    font-size: 4vmin;
     text-align: end;
     grid-column: 1;
     opacity: 0.75;
+    transition-timing-function: ease-in-out;
+    transition-duration: 250ms;
 }
 
 #titleLastName {
     font-family: Anton;
     padding-left: 2vmin;
-    font-size: 7vmin;
+    font-size: 10vmin;
     grid-column: 2;
     height: 100%;
     width: 100%;
     opacity: 0.90;
+    transition-timing-function: ease-in-out;
+    transition-duration: 250ms;
+}
+
+#sectionDiv {
+    display:flex;
+    flex-wrap: wrap;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    margin-top: 5vmin;
+    position: absolute;
+    opacity: 0;
+    transition-delay: 150ms;
+    transition-duration: 300ms;
+    width: 100%;
+    height: 60%;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Questrial;
+}
+
+#sectionDiv h1 {
+    width: 30%;
+    margin: 5vmin;
+    opacity: 0.95;
+}
+
+#profilePicture {
+    border-radius: 50%;
+    margin: 5vmin;
+    height: 30vmin;
+    width: 30vmin;
+    opacity: 0.95;
 }
 
 #bottomNavBar {
+    position: absolute;
     display: flex;
     align-items: center;
-    width: 100%;
     height: 30px;
     grid-column: 1;
     grid-row: 4;
     margin-left: 3vmin;
     margin-bottom:4vmin;
-    align-self: flex-end;
+    left: 0;
+    bottom: 0;
 }
 
 .btnNavPage {

@@ -9,22 +9,28 @@
 
     <script src="assets/js/script.js"></script>
 </head>
-<body id="bodyHome" onload="bgImageRandom()">
-    <div id="title"> 
-        <div id="titleLeftColumn">
-            <h2 id="titleFirstName" class="titleText">Gabriel</h2> 
-            <h3 id="titleJob"class="titleText">développeur front-end</h3>
-        </div>
-        <div id="titleLastName" > 
-            <h1 class="titleText">Larue</h1>
-        </div>
+<body>
+    <div id="bodyHome">
+            <div id="title"> 
+                <div id="titleLeftColumn">
+                    <h2 id="titleFirstName" class="titleText">Gabriel</h2> 
+                    <h3 id="titleJob"class="titleText">développeur front-end</h3>
+                </div>
+                <div id="titleLastName" > 
+                    <h1 class="titleText">Larue</h1>
+                </div>
+            </div>
+            <div id="sectionDiv">
+                <img id="profilePicture" src="assets/images/photoProfil.jpg">
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quos id consequuntur eaque tempore. Accusamus voluptates fuga, a culpa, enim, maxime vero alias animi nobis obcaecati sed debitis ab beatae.</h1>
+            </div>
+            <div id="bottomNavBar">
+                <img id="btnLang" src="assets/images/iconFrW.png" onclick="changeLang()">
+                <button id="btnProject" class="btnNavPage" onclick="pushSection(this.id)" onmouseover="showSectionName(this.id)" onmouseout="removeSectionName()"></button>
+                <button id="btnAbout" class="btnNavPage" onclick="pushSection(this.id)" onmouseover="showSectionName(this.id)" onmouseout="removeSectionName()"></button>
+                <button id="btnContact" class="btnNavPage" onclick="pushSection(this.id)" onmouseover="showSectionName(this.id)" onmouseout="removeSectionName()"></button>
+                <p id="textBtn"></p>
+            </div>   
     </div>
-    <div id="bottomNavBar">
-        <img id="btnLang" src="assets/images/iconFrW.png" onclick="changeLang()">
-        <button id="btnProject" class="btnNavPage" onclick="pushSection(this.id)" onmouseover="showSectionName(this.id)" onmouseout="removeSectionName()"></button>
-        <button id="btnAbout" class="btnNavPage" onclick="pushSection(this.id)" onmouseover="showSectionName(this.id)" onmouseout="removeSectionName()"></button>
-        <button id="btnContact" class="btnNavPage" onclick="pushSection(this.id)" onmouseover="showSectionName(this.id)" onmouseout="removeSectionName()"></button>
-        <p id="textBtn"></p>
-    </div>
-</body>
+</body> 
 </html>
