@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Larue</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    <script src="assets/js/script.js"></script>
+</head>
+<body id="bodyHome" onload="bgImageRandom()">
+    <div id="title"> 
+        <div id="titleLeftColumn">
+            <h2 id="titleFirstName" class="titleText">Gabriel</h2> 
+            <h3 id="titleJob"class="titleText">développeur front-end</h3>
+        </div>
+        <div id="titleLastName" > 
+            <h1 class="titleText">Larue</h1>
+        </div>
+    </div>
+    <div id="bottomNavBar">
+        <img id="btnLang" src="assets/images/iconFrW.png" onclick="changeLang()">
+        <button id="btnProject" class="btnNavPage" onclick="pushSection(this.id)" onmouseover="showSectionName(this.id)" onmouseout="removeSectionName()"></button>
+        <button id="btnAbout" class="btnNavPage" onclick="pushSection(this.id)" onmouseover="showSectionName(this.id)" onmouseout="removeSectionName()"></button>
+        <button id="btnContact" class="btnNavPage" onclick="pushSection(this.id)" onmouseover="showSectionName(this.id)" onmouseout="removeSectionName()"></button>
+        <p id="textBtn"></p>
+    </div>
+</body>
+</html>
