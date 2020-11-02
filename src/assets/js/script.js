@@ -1,3 +1,21 @@
+// Change background image randomly when loading page
+function bgImageRandom() {
+    var randomNumber = Math.floor(Math.random() * 3)
+    switch(randomNumber) {
+        case 0:
+            document.getElementById("bodyHome").style.backgroundColor = "teal";
+            break;
+        case 1:
+            document.getElementById("bodyHome").style.backgroundColor = "black";
+            break;
+        case 2:
+            document.getElementById("bodyHome").style.backgroundColor = "blue";
+            break;
+        default:
+            document.getElementById("bodyHome").style.backgroundColor = "black";
+    }
+}
+
 // When hovering on navigation dots bottom left, the name of the section is displayed next to button div.
 function showSectionName(id) {
     if(id == "btnProject"){
@@ -17,15 +35,8 @@ function removeSectionName() {
 
 // Navigation to section
 function pushSection(id) {
-    document.getElementById("title").style.marginTop = "-50vmin";
-    document.getElementById("title").style.marginLeft = "-15vmin";
-    document.getElementById("titleJob").style.marginBottom = "3.5vmin";
-    document.getElementById("titleLeftColumn").style.marginTop = "0vmin";
-    document.getElementById("titleLastName").style.fontSize = "7vmin";
-    document.getElementById("titleLastName").style.paddingBottom = "0";
-    document.getElementById("titleFirstName").style.fontSize = "5vmin";
-    document.getElementById("titleJob").style.fontSize = "2vmin";
-    document.getElementById("sectionDiv").style.opacity = "1";
+    document.getElementById("title").style.gridRow = "1";
+    document.getElementById("title").style.marginLeft = "0vw";
 }
 
 // When clicking on the language icon bottom left, it toggle french or english for the whole website.
