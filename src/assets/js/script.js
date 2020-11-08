@@ -16,6 +16,8 @@ function profileCursorSkew(){
             rotationX = Math.round((posXPicture - posXClient) / 20);
             if(rotationX < -20){
                 document.getElementById("profilePicture").style.transform = "rotateY(-21deg)";
+            }else if(rotationX > 20){
+                document.getElementById("profilePicture").style.transform = "rotateY(21deg)";
             }else{
                 document.getElementById("profilePicture").style.transform = "rotateY(" + rotationX + "deg)";
             }
@@ -23,6 +25,8 @@ function profileCursorSkew(){
             rotationY = Math.round((posYPicture - posYClient) / 15);
             if(rotationY > 20){
                 document.getElementById("profilePicture").style.transform += "rotateX(-21deg)"; 
+            }else if(rotationY < -20){
+                document.getElementById("profilePicture").style.transform += "rotateX(21deg)";
             }else{
                 document.getElementById("profilePicture").style.transform += "rotateX(" + -rotationY + "deg)"; 
             }  
