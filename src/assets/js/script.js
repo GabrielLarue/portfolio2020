@@ -14,10 +14,18 @@ function profileCursorSkew(){
         var rotationY = 0;
 
             rotationX = Math.round((posXPicture - posXClient) / 20);
-            document.getElementById("profilePicture").style.transform = "rotateY(" + rotationX + "deg)";
+            if(rotationX < -20){
+                document.getElementById("profilePicture").style.transform = "rotateY(-21deg)";
+            }else{
+                document.getElementById("profilePicture").style.transform = "rotateY(" + rotationX + "deg)";
+            }
 
             rotationY = Math.round((posYPicture - posYClient) / 15);
-            document.getElementById("profilePicture").style.transform += "rotateX(" + -rotationY + "deg)";   
+            if(rotationY > 20){
+                document.getElementById("profilePicture").style.transform += "rotateX(-21deg)"; 
+            }else{
+                document.getElementById("profilePicture").style.transform += "rotateX(" + -rotationY + "deg)"; 
+            }  
     }  
 }
 
