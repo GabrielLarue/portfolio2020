@@ -264,13 +264,11 @@ body {
 
             #profilePicture {
                 border-radius: 25vmin;
-                height: 30vh;
-                width: 30vh;
+                height: 40vh;
+                width: 40vh;
                 margin-right: 2vw;
 
                 opacity: 0.95;
-
-                transition-duration: 1500ms;
             }
 
                 @media (max-aspect-ratio: 1/1) {

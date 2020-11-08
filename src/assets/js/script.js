@@ -1,26 +1,24 @@
 var isEnglish = false;
 
 function profileCursorSkew(){
-    var e = window.event;
-    var picture = document.getElementById("profilePicture");
-    var pictureSize = picture.height;
-    var posXClient = e.clientX;
-    var posYClient = e.clientY;
-    var posXPicture = (picture.offsetLeft - picture.scrollLeft + picture.clientLeft) + 1/2 * pictureSize;
-    var posYPicture = (picture.offsetTop - picture.scrollTop + picture.clientTop) + 1/2 * pictureSize;
+    if(document.getElementById("profilePicture")){
+        var e = window.event;
+        var picture = document.getElementById("profilePicture");
+        var posXClient = e.clientX;
+        var posYClient = e.clientY;
+        var posXPicture = picture.offsetLeft + picture.width * 0.5;
+        var posYPicture = picture.offsetTop + picture.height * 0.5;
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        var rotationX = 0;
+        var rotationY = 0;
 
-    if(posXClient < posXPicture && posYClient < posYPicture) {
-        document.getElementById("profilePicture").style.borderRadius = "0";
-    }else if(posXClient > posXPicture && posYClient < posYPicture) {
-        document.getElementById("profilePicture").style.borderRadius = "15vh";
-        ocument.getElementById("profilePicture").style.transform = "scale(1.5)";
-    }else if(posXClient < posXPicture && posYClient > posYPicture) {
-        document.getElementById("profilePicture").style.borderRadius = "15vh";
-    }else if(posXClient > posXPicture && posYClient > posYPicture){
-        document.getElementById("profilePicture").style.transform = "scale(1.2)";
-        document.getElementById("profilePicture").style.borderRadius = "0";
-    }else{
-    }
+            rotationX = Math.round((posXPicture - posXClient) / 20);
+            document.getElementById("profilePicture").style.transform = "rotateY(" + rotationX + "deg)";
+
+            rotationY = Math.round((posYPicture - posYClient) / 15);
+            document.getElementById("profilePicture").style.transform += "rotateX(" + -rotationY + "deg)";   
+    }  
 }
 
 // When hovering on navigation dots bottom left, the name of the section is displayed next to button div.
