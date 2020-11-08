@@ -1,124 +1,387 @@
-@font-face {
-    font-family: Anton;
-    src: url("../fonts/Anton-Regular.ttf");
-  }
+    @font-face {
+        font-family: Anton;
+        src: url("../fonts/Anton-Regular.ttf");
+    }
 
-  @font-face {
-    font-family: Questrial;
-    src: url("../fonts/Questrial-Regular.ttf");
-  }
+    @font-face {
+        font-family: Questrial;
+        src: url("../fonts/Questrial-Regular.ttf");
+    }
 
-#bodyHome {
-    display: grid;
-    background-image: url("../images/canyonBackground.png");
+    @keyframes iconHover {
+        0% {
+            transform: scale(1);
+        }
+        25% {
+            transform: scale(1.5);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+
+    height: 100vh;
+    margin: 0;
+
+    background-color: rgba(245, 246, 248);
+    background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    grid-template-columns: 33% auto 33%;
-    grid-template-rows: repeat(4, 25vh);
+    background-position: center bottom;
+   
+    transition-duration: 500ms;
 }
 
-#title {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    height: 100%;
-    width: 100%;
-    grid-column: 1;
-    grid-row: 3;
-    margin-left: 10vw;
-}
+    @media (max-aspect-ratio: 1/1) {
+        body {
+            background-image: url("../images/backgroundV.jpg");
+            background-position: left bottom;
+            background-size: cover;
+        }
+    }
 
-.titleText {
-    color: white;
-    margin:0px;
-}
+    @media (min-aspect-ratio: 1921/1080) {
+        body{
+            background-image: url("../images/backgroundWide.jpg");
+        }
+    }
 
-#titleLeftColumn{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    margin-top: -3.5vmin;
-    height: 19.5vmin;
-}
+    @media (min-aspect-ratio: 780/350) {
+        body{
+            background: transparent;
+        }
+    }
 
-#titleFirstName {
-    font-family: Questrial;
-    font-size: 5vmin;
-    text-align: end;
-    grid-column: 1;
-    opacity: 0.75;
-}
+    #title {
+        display: flex;
+        
+        position: absolute;
+        height: 30vmin;
+        width: 80vmin;
+        top: 40vmin;
+        left: 0 !important;
 
-#titleJob {
-    font-family: Questrial;
-    font-size: 2vmin;
-    text-align: end;
-    grid-column: 1;
-    opacity: 0.75;
-}
+        transition-timing-function: ease-in-out;
+        transition-duration: 250ms;
+    }
 
-#titleLastName {
-    font-family: Anton;
-    padding-left: 2vmin;
-    font-size: 7vmin;
-    grid-column: 2;
-    height: 100%;
-    width: 100%;
-    opacity: 0.90;
-}
+        @media (max-aspect-ratio: 1/1) {
+            #title {
+                top: 20vmin;
+            }
+        }
 
-#bottomNavBar {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 30px;
-    grid-column: 1;
-    grid-row: 4;
-    margin-left: 3vmin;
-    margin-bottom:4vmin;
-    align-self: flex-end;
-}
+        .titleText {
+            margin:0px;
 
-.btnNavPage {
-    border: none;
-    height: 3vmin;
-    width: 3vmin;
-    margin-left: 1.5vmin;
-    border-radius: 2vmin;
-    opacity: 0.5;
-    transition-duration: 300ms;
-}
+            color: white;
+        }
 
-#btnLang {
-    width: 5vmin;
-    height: 5vmin;
-    opacity: 0.50;
-    transition-duration: 300ms;
-}
+            #titleLeftColumn{
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
 
-#btnLang:hover {
-    opacity: 0.95;
-}
+                margin-top: 3.5vmin;
+                height: 19.5vmin;
 
-#btnProject:hover {
-    background-color: #8F80A7;
-    opacity: 0.95;
-}
+                transition-timing-function: ease-in-out;
+                transition-duration: 250ms;
+            }
 
-#btnAbout:hover {
-    background-color: #E78650;
-    opacity: 0.95;
-}
+                #titleFirstName {
+                    text-align: end;
 
-#btnContact:hover {
-    background-color: #5CC2D0;
-    opacity: 0.95;
-}
+                    font-family: Questrial;
+                    font-size: 7vmin;
+                    color: red;
 
-#textBtn {
-    font-family: Questrial;
-    font-size: 2vmin;
-    color: white;
-    margin-left: 1.5vmin;
-    opacity: 0;
-    transition-duration: 1s;
-}
+                    opacity: 0.75;
+
+                    transition-timing-function: ease-in-out;
+                    transition-duration: 250ms;
+                }
+
+                #titleJob {
+                    text-align: end;
+
+                    font-family: Questrial;
+                    font-size: 4vmin;
+                    color: rgba(127.5, 127.5, 127.5, 0.8);
+
+                    opacity: 0.75;
+                    width: 45vmin;
+
+                    transition-timing-function: ease-in-out;
+                    transition-duration: 250ms;
+                }
+
+            #titleLastName {
+                font-size: 10vmin;
+                font-family: Anton;
+                
+                padding-left: 2vmin;
+                height: 100%;
+                width: 100%;
+                opacity: 0.90;
+            }
+
+                #colorLastName {
+                    transition-timing-function: ease-in-out;
+                    transition-duration: 300ms;
+                }
+
+                @media (min-aspect-ratio: 780/350) {
+                    #colorLastName{
+                        color:rgba(0, 0, 0, 0.75)
+                    }
+                }
+
+                @media (max-aspect-ratio: 1/1) {
+                    #colorLastName {
+                        color: rgba(0, 0, 0, 0.75)
+                    }
+                }
+
+    #sectionDiv {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 100vw;
+        height: 50vh;
+        
+        font-family: Questrial;
+
+        transition-delay: 150ms;
+        transition-duration: 300ms;  
+
+        overflow-y: scroll;
+    }
+
+        @media (min-aspect-ratio: 780/350) {
+            #sectionDiv {
+                margin-top: 15vh;
+            }
+        }
+
+        @media (max-aspect-ratio: 1/1) {
+            #sectionDiv {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: nowrap;
+
+                height: 80vh;
+            }
+        }
+
+        #contact {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100vw;
+            height: 40vh;
+            font-size: 3vmin;
+        }
+
+        @media (max-aspect-ratio: 1/1) {
+            #contact {
+                margin-top: -10vh;
+            }
+        }
+
+        #contact div {
+            background-color: rgba(255, 255, 255, 0.75);
+            border-radius: 5vh;
+        }
+
+            @media (max-aspect-ratio: 1/1) {
+                #contact div{
+                    background: transparent;
+                    border-radius: 0;
+                }
+            }
+
+        #contact i {
+            color: black;
+
+            margin: 5vmin;
+            font-size: 10vh;
+
+            transition-duration: 1000ms;
+        }
+
+        #contact i:hover {
+            color: red;
+            opacity: 0.95;
+            animation: iconHover 500ms;
+        }
+
+        #sectionDiv h1 {
+            text-align: center;
+
+            width: 60%;
+            opacity: 0.70;
+
+            font-size: 3.5vmin;
+        }
+
+            #sectionDiv h1 span {
+                font-size: 4vh;
+                color: red;
+            }
+
+            @media (max-aspect-ratio: 1/1) {
+                #sectionDiv h1 span{
+                    font-size: 3vh;
+                }
+            }
+
+            @media (max-aspect-ratio: 1/1) {
+                #sectionDiv h1{
+                    font-size: 2.5vh;
+
+                    width: 90%;
+                    height: auto;
+                }
+            }
+
+            #textAbout span {
+                font-weight: bold;
+            }
+
+            #profilePicture {
+                border-radius: 25vmin;
+                height: 30vh;
+                width: 30vh;
+                margin-right: 2vw;
+
+                opacity: 0.95;
+
+                transition-duration: 1500ms;
+            }
+
+                @media (max-aspect-ratio: 1/1) {
+                    #profilePicture{
+                        width: 20vh;
+                        height: 20vh;
+                        border-radius: 10vh;
+                        margin-bottom: 4vh;
+                    }
+                }
+
+            .projectPicture {
+                height: 40vh;
+                width: auto;
+            }
+
+    #bottomNavBar {
+        display: flex;
+        align-items: center;
+
+        position: absolute;
+        height: 30px;
+        left: 4vmin;
+        bottom: 0;
+        margin-left: 0vmin;
+        margin-bottom:4vmin; 
+
+        outline: none;
+    }
+
+        .btnNavPage {
+            border: none;
+            height: 3vmin;
+            width: 3vmin;
+            margin-left: 1.5vmin;
+            border-radius: 1.5vmin;
+            opacity: 0.5;
+            background-color: rgba(127.5, 127.5, 127.5, 0.8);
+            
+            transition-duration: 300ms;
+        }
+
+            @media (max-aspect-ratio: 1/1) {
+                .btnNavPage {
+                    background-color: rgba(255, 255, 255, 0.8);
+
+                    height: 3vh;
+                    width: 3vh;
+                    border-radius: 1.5vh;
+                }
+            }
+
+            @media (min-aspect-ratio: 780/350) {
+                .btnNavPage {
+                    height: 4vh;
+                    border-radius: 2vh;
+                }
+            }
+
+            .btnNavPage:focus {
+                outline: none;
+            }
+
+        #btnLang {
+            width: 5vmin;
+            height: 5vmin;
+            opacity: 0.50;
+
+            transition-duration: 300ms;
+        }
+        
+            .btnNavPage:hover {
+                opacity: 1;
+            }
+
+            #textBtn {
+                margin-left: 1.5vmin;
+                opacity: 0;
+
+                font-family: Questrial;
+                font-size: 2vmin;
+                color: white;
+
+                transition-duration: 1s;
+            }
+
+                @media (max-aspect-ratio: 1/1) {
+                    #textBtn{
+                        font-size: 3vh;
+                        margin-left: 35vw;
+                    }
+                }
+    
+    #bottomRightNavBar {
+        display: flex;
+        align-items: center;
+            
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 30px;
+        margin-right: 4vmin;
+        margin-bottom:4vmin; 
+            
+        outline: none;
+    }
+
+        #btnHome {
+            display: none;
+        }
+
+        #btnHome:hover {
+            opacity: 0.95;
+        }
