@@ -269,6 +269,8 @@ body {
                 margin-right: 2vw;
 
                 opacity: 0.95;
+
+                transition-duration: 500ms;
             }
 
                 @media (max-aspect-ratio: 1/1) {
@@ -280,9 +282,17 @@ body {
                     }
                 }
 
-            .projectPicture {
-                height: 40vh;
-                width: auto;
+                .projectPicture {
+                    height: auto;
+                    width: 25vh;
+                    margin-bottom:3vh;
+                }
+
+            @media (max-aspect-ratio: 1/1) {
+                .projectPicture {
+                    height: 40vh;
+                    width: auto;
+                }
             }
 
     #bottomNavBar {
@@ -383,3 +393,78 @@ body {
         #btnHome:hover {
             opacity: 0.95;
         }
+
+    .cardProject {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        margin: 0 20vmin;
+
+        font-size: 3.5vh;
+        color: rgba(0, 0, 0, 0.8);
+    }
+
+        @media (max-aspect-ratio: 1/1) {
+            .cardProject{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                margin: 5vmin;
+            }
+        }
+
+        @media (max-aspect-ratio: 1/1) {
+            .cardProject div{
+                text-align: center;
+            }
+        }
+
+    .cardProject img {
+        margin-right: 10vmin;
+    }
+
+        @media (max-aspect-ratio: 1/1) { 
+            .cardProject img {
+                margin: 0vmin;
+                margin-top: 0vh;
+            }       
+        } 
+
+    #sectionDiv .titleProject {
+        text-align: start;
+        opacity: 1;
+
+        margin: 0;
+        
+        font-size: 5vmin;
+    }
+
+    #sectionDiv .subtitleProject {
+        text-align: start;
+        color: red;
+        font-size: 4vmin;
+        opacity: 0.5;
+    }
+
+    #sectionDiv .titleProject span{
+        text-align: start;
+        opacity: 0.5;
+
+        margin: 0;
+        
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 2.5vmin;
+    }
+
+    #sectionDiv h3 {
+        font-size: 4vmin;
+    }
+
+        @media (max-aspect-ratio: 1/1) { 
+            #sectionDiv h3 {
+                text-align: end;
+            }       
+        } 
+        
