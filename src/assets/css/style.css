@@ -1,31 +1,44 @@
-    @font-face {
-        font-family: Anton;
-        src: url("../fonts/Anton-Regular.ttf");
-    }
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FONTS 
+*/
 
-    @font-face {
-        font-family: Questrial;
-        src: url("../fonts/Questrial-Regular.ttf");
-    }
+@font-face {
+    font-family: Anton;
+    src: url("../fonts/Anton-Regular.ttf");
+}
 
-    @keyframes iconHover {
-        0% {
-            transform: scale(1);
-        }
-        25% {
-            transform: scale(1.5);
-            opacity: 1;
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
+@font-face {
+    font-family: Questrial;
+    src: url("../fonts/Questrial-Regular.ttf");
+}
+
+/*                           
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+KEYFRAMES                    
+*/
+
+@keyframes iconHover {
+0% {
+    transform: scale(1);
+}
+25% {
+    transform: scale(1.5);
+    opacity: 1;
+}
+100% {
+    transform: scale(1);
+}
+}
+
+/*                               
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+BODY                         
+*/
 
 body {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: flex-start;
 
     height: 100vh;
     margin: 0;
@@ -59,393 +72,330 @@ body {
         }
     }
 
-    #title {
+    #pageBody {
+        height: 100vh;
         display: flex;
-        
-        position: absolute;
-        height: 30vmin;
-        width: 80vmin;
-        top: 40vmin;
-        left: 0 !important;
-
-        transition-timing-function: ease-in-out;
-        transition-duration: 250ms;
+        align-items: center;
+        justify-content: center;
     }
 
-        @media (max-aspect-ratio: 1/1) {
-            #title {
-                top: 20vmin;
-            }
+/* 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+TITLE                          
+*/
+
+#title {
+    display: flex;
+    
+    position: absolute;
+    height: 30vmin;
+    width: 80vmin;
+    top: 40vmin;
+    left: 0 !important;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 250ms;
+}
+
+    @media (max-aspect-ratio: 1/1) {
+        #title {
+            top: 20vmin;
+        }
+    }
+
+    .titleText {
+        margin:0px;
+
+        color: white;
+    }
+
+        #titleLeftColumn{
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+
+            margin-top: 3.5vmin;
+            height: 19.5vmin;
+
+            transition-timing-function: ease-in-out;
+            transition-duration: 250ms;
         }
 
-        .titleText {
-            margin:0px;
+            #titleFirstName {
+                text-align: end;
 
-            color: white;
-        }
+                font-family: Questrial;
+                font-size: 7vmin;
+                color: red;
 
-            #titleLeftColumn{
-                display: flex;
-                justify-content: flex-end;
-                flex-direction: column;
-
-                margin-top: 3.5vmin;
-                height: 19.5vmin;
+                opacity: 0.75;
 
                 transition-timing-function: ease-in-out;
                 transition-duration: 250ms;
             }
 
-                #titleFirstName {
-                    text-align: end;
+            #titleJob {
+                text-align: end;
 
-                    font-family: Questrial;
-                    font-size: 7vmin;
-                    color: red;
+                font-family: Questrial;
+                font-size: 4vmin;
+                color: rgba(127.5, 127.5, 127.5, 0.8);
 
-                    opacity: 0.75;
+                opacity: 0.75;
+                width: 45vmin;
 
-                    transition-timing-function: ease-in-out;
-                    transition-duration: 250ms;
-                }
-
-                #titleJob {
-                    text-align: end;
-
-                    font-family: Questrial;
-                    font-size: 4vmin;
-                    color: rgba(127.5, 127.5, 127.5, 0.8);
-
-                    opacity: 0.75;
-                    width: 45vmin;
-
-                    transition-timing-function: ease-in-out;
-                    transition-duration: 250ms;
-                }
-
-            #titleLastName {
-                font-size: 10vmin;
-                font-family: Anton;
-                
-                padding-left: 2vmin;
-                height: 100%;
-                width: 100%;
-                opacity: 0.90;
+                transition-timing-function: ease-in-out;
+                transition-duration: 250ms;
             }
 
-                #colorLastName {
-                    transition-timing-function: ease-in-out;
-                    transition-duration: 300ms;
-                }
-
-                @media (min-aspect-ratio: 780/350) {
-                    #colorLastName{
-                        color:rgba(0, 0, 0, 0.75)
-                    }
-                }
-
-                @media (max-aspect-ratio: 1/1) {
-                    #colorLastName {
-                        color: rgba(0, 0, 0, 0.75)
-                    }
-                }
-
-    #sectionDiv {
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-
-        margin-top: auto;
-        margin-bottom: auto;
-        width: 100vw;
-        height: 50vh;
-        
-        font-family: Questrial;
-
-        transition-delay: 150ms;
-        transition-duration: 300ms;  
-
-        overflow-y: scroll;
-    }
-
-        @media (min-aspect-ratio: 780/350) {
-            #sectionDiv {
-                margin-top: 15vh;
-            }
-        }
-
-        @media (max-aspect-ratio: 1/1) {
-            #sectionDiv {
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                flex-wrap: nowrap;
-
-                height: 80vh;
-            }
-        }
-
-        #contact {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            width: 100vw;
-            height: 40vh;
-            font-size: 3vmin;
-        }
-
-        @media (max-aspect-ratio: 1/1) {
-            #contact {
-                margin-top: -10vh;
-            }
-        }
-
-        #contact div {
-            background-color: rgba(255, 255, 255, 0.75);
-            border-radius: 5vh;
-        }
-
-            @media (max-aspect-ratio: 1/1) {
-                #contact div{
-                    background: transparent;
-                    border-radius: 0;
-                }
-            }
-
-        #contact i {
-            color: black;
-
-            margin: 5vmin;
-            font-size: 10vh;
-
-            transition-duration: 1000ms;
-        }
-
-        #contact i:hover {
-            color: red;
-            opacity: 0.95;
-            animation: iconHover 500ms;
-        }
-
-        #sectionDiv h1 {
-            text-align: center;
-
-            width: 60%;
-            opacity: 0.70;
-
-            font-size: 3.5vmin;
-        }
-
-            #sectionDiv h1 span {
-                font-size: 4vh;
-                color: red;
-            }
-
-            @media (max-aspect-ratio: 1/1) {
-                #sectionDiv h1 span{
-                    font-size: 3vh;
-                }
-            }
-
-            @media (max-aspect-ratio: 1/1) {
-                #sectionDiv h1{
-                    font-size: 2.5vh;
-
-                    width: 90%;
-                    height: auto;
-                }
-            }
-
-            #textAbout span {
-                font-weight: bold;
-            }
-
-            #profilePicture {
-                border-radius: 25vmin;
-                height: 40vh;
-                width: 40vh;
-                margin-right: 2vw;
-
-                opacity: 0.95;
-
-                transition-duration: 500ms;
-            }
-
-                @media (max-aspect-ratio: 1/1) {
-                    #profilePicture{
-                        width: 20vh;
-                        height: 20vh;
-                        border-radius: 10vh;
-                        margin-bottom: 4vh;
-                    }
-                }
-
-                .projectPicture {
-                    height: auto;
-                    width: 25vh;
-                    margin-bottom:3vh;
-                }
-
-            @media (max-aspect-ratio: 1/1) {
-                .projectPicture {
-                    height: 40vh;
-                    width: auto;
-                }
-            }
-
-    #bottomNavBar {
-        display: flex;
-        align-items: center;
-
-        position: absolute;
-        height: 30px;
-        left: 4vmin;
-        bottom: 0;
-        margin-left: 0vmin;
-        margin-bottom:4vmin; 
-
-        outline: none;
-    }
-
-        .btnNavPage {
-            border: none;
-            height: 3vmin;
-            width: 3vmin;
-            margin-left: 1.5vmin;
-            border-radius: 1.5vmin;
-            opacity: 0.5;
-            background-color: rgba(127.5, 127.5, 127.5, 0.8);
+        #titleLastName {
+            font-size: 10vmin;
+            font-family: Anton;
             
-            transition-duration: 300ms;
+            padding-left: 2vmin;
+            height: 100%;
+            width: 100%;
+            opacity: 0.90;
         }
 
-            @media (max-aspect-ratio: 1/1) {
-                .btnNavPage {
-                    background-color: rgba(255, 255, 255, 0.8);
-
-                    height: 3vh;
-                    width: 3vh;
-                    border-radius: 1.5vh;
-                }
+            #colorLastName {
+                transition-timing-function: ease-in-out;
+                transition-duration: 300ms;
             }
 
             @media (min-aspect-ratio: 780/350) {
-                .btnNavPage {
-                    height: 4vh;
-                    border-radius: 2vh;
+                #colorLastName{
+                    color:rgba(0, 0, 0, 0.75)
                 }
             }
 
-            .btnNavPage:focus {
-                outline: none;
-            }
-
-        #btnLang {
-            width: 5vmin;
-            height: 5vmin;
-            opacity: 0.50;
-
-            transition-duration: 300ms;
-        }
-        
-            .btnNavPage:hover {
-                opacity: 1;
-            }
-
-            #textBtn {
-                margin-left: 1.5vmin;
-                opacity: 0;
-
-                font-family: Questrial;
-                font-size: 2vmin;
-                color: white;
-
-                transition-duration: 1s;
-            }
-
-                @media (max-aspect-ratio: 1/1) {
-                    #textBtn{
-                        font-size: 3vh;
-                        margin-left: 35vw;
-                    }
+            @media (max-aspect-ratio: 1/1) {
+                #colorLastName {
+                    color: rgba(0, 0, 0, 0.75)
                 }
+            }
+
+    /* 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+CONTENT GENERAL                     
+*/
+
+#sectionDiv {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100vw;
+    height: 65vh;
     
-    #bottomRightNavBar {
-        display: flex;
-        align-items: center;
-            
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        height: 30px;
-        margin-right: 4vmin;
-        margin-bottom:4vmin; 
-            
-        outline: none;
+    font-family: Questrial;
+
+    transition-delay: 150ms;
+    transition-duration: 300ms;  
+
+    overflow-y: scroll;
+    scrollbar-width: 0 !important;
+}
+
+    @media (min-aspect-ratio: 780/350) {
+        #sectionDiv {
+            margin-top: 15vh;
+        }
     }
 
-        #btnHome {
-            display: none;
+    @media (max-aspect-ratio: 1/1) {
+        #sectionDiv {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+
+            height: 70vh;
         }
+    }
 
-        #btnHome:hover {
-            opacity: 0.95;
+    /* 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+CONTENT CONTACT                    
+*/
+
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 40vh;
+    font-size: 3vmin;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    #contact {
+        margin-top: -10vh;
+    }
+}
+
+#contact div {
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 5vh;
+}
+
+    @media (max-aspect-ratio: 1/1) {
+        #contact div{
+            background: transparent;
+            border-radius: 0;
         }
+    }
 
-    .cardProject {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
+#contact i {
+    color: black;
 
-        margin: 0 20vmin;
+    margin: 5vmin;
+    font-size: 10vh;
 
-        font-size: 3.5vh;
-        color: rgba(0, 0, 0, 0.8);
+    transition-duration: 1000ms;
+}
+
+#contact i:hover {
+    color: red;
+    opacity: 0.95;
+    animation: iconHover 500ms;
+}
+    /* 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+CONTENT ABOUT                     
+*/
+
+#sectionDiv h1 {
+    text-align: center;
+
+    width: 35vw;
+    opacity: 0.70;
+
+    font-size: 2.5vh;
+}
+
+    #sectionDiv h1 span {
+        font-size: 2.75vh;
+        color: red;
+        opacity: 0.75;
+    }
+
+    @media (max-aspect-ratio: 1/1) {
+        #sectionDiv h1 span{
+            font-size: 3vh;
+        }
+    }
+
+    @media (max-aspect-ratio: 1/1) {
+        #sectionDiv h1{
+            font-size: 2.5vh;
+
+            width: 90%;
+            height: auto;
+        }
+    }
+
+    #textAbout span {
+        font-weight: bold;
+    }
+
+    #profilePicture {
+        border-radius: 25vmin;
+        height: 40vh;
+        width: 40vh;
+        margin-right: 2vw;
+
+        opacity: 0.95;
+
+        transition-duration: 350ms;
     }
 
         @media (max-aspect-ratio: 1/1) {
-            .cardProject{
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-
-                margin: 5vmin;
+            #profilePicture{
+                width: 20vh;
+                height: 20vh;
+                border-radius: 10vh;
+                margin-bottom: 4vh;
             }
         }
+
+/* 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+CONTENT PROJECT                    
+*/
+
+.cardProject {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    height: 40vh;
+    margin: 0 20vmin;
+
+    font-size: 3.5vh;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+    @media (max-aspect-ratio: 1/1) {
+        .cardProject{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            margin: 5vmin;
+            height: 20vh;
+        }
+    }
+
+    .cardProject div {
+        height: 20vh;
+        width: 35vw;
+    }
 
         @media (max-aspect-ratio: 1/1) {
             .cardProject div{
                 text-align: center;
+                width: 80vw;
             }
         }
 
-    .cardProject img {
+    .projectPicture {
+        height: 50vh;
         margin-right: 10vmin;
     }
+    
+        @media (max-aspect-ratio: 1/1) {
+            #sectionDiv .projectPicture {
+                height: 40vh;
+                width: auto;
+                margin-bottom: 3vh;
+            }
+        }
 
         @media (max-aspect-ratio: 1/1) { 
-            .cardProject img {
+            .projectPicture {
                 margin: 0vmin;
                 margin-top: 0vh;
             }       
         } 
 
-    #sectionDiv .titleProject {
-        text-align: start;
-        opacity: 1;
+#sectionDiv .titleProject {
+    text-align: start;
+    opacity: 1;
 
-        margin: 0;
-        
-        font-size: 5vmin;
-    }
+    margin: 0;
+    
+    font-size: 4vh;
+}
 
-    #sectionDiv .subtitleProject {
-        text-align: start;
-        color: red;
-        font-size: 4vmin;
-        opacity: 0.5;
+    @media (max-aspect-ratio: 1/1) {
+        #sectionDiv .titleProject{
+            text-align: center;
+        }
     }
 
     #sectionDiv .titleProject span{
@@ -455,16 +405,124 @@ body {
         margin: 0;
         
         color: rgba(0, 0, 0, 0.8);
-        font-size: 2.5vmin;
+        font-size: 2vh;
     }
 
-    #sectionDiv h3 {
-        font-size: 4vmin;
+#sectionDiv .subtitleProject {
+    text-align: start;
+    color: red;
+    font-size: 3vh;
+    opacity: 0.5;
+}
+
+    @media (max-aspect-ratio: 1/1) {
+        #sectionDiv .subtitleProject{
+            text-align: center;
+        }
     }
 
-        @media (max-aspect-ratio: 1/1) { 
-            #sectionDiv h3 {
-                text-align: end;
-            }       
-        } 
+#sectionDiv h3 {
+    font-size: 2.5vh;
+}
+
+    @media (max-aspect-ratio: 1/1) { 
+        #sectionDiv h3 {
+            text-align: center;
+        }       
+    } 
+
+/* 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+BOTTOM NAVIGATION                    
+*/
+
+#bottomNavBar {
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    height: 30px;
+    left: 4vmin;
+    bottom: 0;
+    margin-left: 0vmin;
+    margin-bottom:4vmin; 
+
+    outline: none;
+}
+
+    .btnNavPage {
+        border: none;
+        height: 3vmin;
+        width: 3vmin;
+        margin-left: 1.5vmin;
+        border-radius: 1.5vmin;
+        opacity: 0.5;
+        background-color: rgba(127.5, 127.5, 127.5, 0.8);
+        
+        transition-duration: 300ms;
+    }
+
+        @media (max-aspect-ratio: 1/1) {
+            .btnNavPage {
+                background-color: rgba(255, 255, 255, 0.8);
+
+                height: 3vh;
+                width: 3vh;
+                border-radius: 1.5vh;
+            }
+        }
+
+        @media (min-aspect-ratio: 780/350) {
+            .btnNavPage {
+                border-radius: 2vh;
+            }
+        }
+
+        .btnNavPage:focus {
+            outline: none;
+        }
+    
+        .btnNavPage:hover {
+            opacity: 1;
+        }
+
+        #textBtn {
+            margin-left: 1.5vmin;
+            opacity: 0;
+
+            font-family: Questrial;
+            font-size: 2vmin;
+            color: white;
+
+            transition-duration: 1s;
+        }
+
+            @media (max-aspect-ratio: 1/1) {
+                #textBtn{
+                    font-size: 3vh;
+                    margin-left: 35vw;
+                }
+            }
+
+#bottomRightNavBar {
+    display: flex;
+    align-items: center;
+        
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 30px;
+    margin-right: 4vmin;
+    margin-bottom:4vmin; 
+        
+    outline: none;
+}
+
+    #btnHome {
+        display: none;
+    }
+
+    #btnHome:hover {
+        opacity: 0.95;
+    }
         

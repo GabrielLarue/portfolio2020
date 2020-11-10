@@ -8,7 +8,7 @@
 // ---------------------------------------------------------------------------------------------------------------
 
 // ====================================
-// When in the "About section" the 
+// When in the "About" section the 
 // profile picture rotate according to 
 // the user cursor position on the screen
 // ====================================
@@ -144,9 +144,9 @@ function pushSection(id) {
 // moved to a local file.
 // ************************************
     if(id == "btnAbout"){
-        document.getElementById("sectionDiv").innerHTML = "<img id=\"profilePicture\" src=\"assets/images/photoProfil.jpg\"><h1 id=\"textAbout\">De nature <span>autodidacte</span> et <span>curieux</span> et depuis toujours <span>passionné</span> par tout ce qui touche la <span>technologie</span>. Le milieu du développement me permet de mettre à profit mon <span>soucis du détail</span> tout en laissant s'exprimer mon côté <span>créatif</span>.<br><br>Travaillant autrefois en <span>audiovisuel</span>, les <span>technologies</span> ont toujours fait partie de mon quotidien et sont pour moi comme une seconde nature.</h1>"
+        document.getElementById("sectionDiv").innerHTML = "<img id=\"profilePicture\" src=\"assets/images/photoProfil.jpg\"><h1 id=\"textAbout\">De nature <span>autodidacte</span> et <span>curieux</span>, je suis depuis toujours <span>passionné</span> par tout ce qui touche la <span>technologie</span>. Le milieu du développement me permet de mettre à profit mon <span>soucis du détail</span> tout en laissant s'exprimer mon côté <span>créatif</span>.<br><br>Travaillant autrefois en <span>audiovisuel</span>, les <span>technologies</span> ont toujours fait partie de mon quotidien et sont pour moi comme une seconde nature.</h1>"
     }else if(id == "btnProject"){
-        document.getElementById("sectionDiv").innerHTML = "<div class=\"cardProject\"><img class=\"projectPicture\" src=\"assets/images/project1Picture.png\"><div><h2 class=\"titleProject\">Gym & Cook <span>(projet en cours)<span></h2><h2 class=\"subtitleProject\">Projet d’équipe intégrateur fin AEC</h2><h3 class=\"texteProjet\">Application de type “PWA” proposant une plateforme pour permettre à des professionnel (entraineur personnel et nutritionniste) de créer des plan de remise en forme en fonction des besoin des utilisateurs. <br><br>En charge du design et de la programmation côté client de la section recette et alimentation.</div><div>";
+        document.getElementById("sectionDiv").innerHTML = "<div class=\"cardProject\"><img class=\"projectPicture\" src=\"assets/images/project1Picture.png\"><div><h2 class=\"titleProject\">Gym & Cook <span>(projet en cours)<span></h2><h2 class=\"subtitleProject\">Projet d’équipe intégrateur fin AEC</h2><h3 class=\"texteProjet\">Application de type «PWA» proposant une plateforme pour permettre à des professionnels (entraîneurs personnels et nutritionnistes) de créer des plans de remise en forme en fonction des besoins des utilisateurs. <br><br>En charge du design et de la programmation côté client de la section recettes et alimentation.</div></div>";
     }else{
         document.getElementById("sectionDiv").innerHTML = "<div id=\"contact\"><a href=\"https://www.linkedin.com/in/gabriel-larue-34709b164/\"><i class=\"fab fa-linkedin\"></i></a><a href=\"https://www.github.com/GabrielLarue\"><i class=\"fab fa-github\"></i></a><a href=\"mailto:gabriellarue.dev@gmail.com\"><i class=\"fas fa-envelope\"></i></a></div>"
     }
